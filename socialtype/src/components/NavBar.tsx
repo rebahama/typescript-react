@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const NavBar = () => {
-  const [hello, sethello] = useState<string | null>('testing')
+  const [hello, sethello] = useState<string | null>('testing');
 
   const testing = () => {
-    sethello('new value')
-  }
+    sethello('new value');
+  };
 
   return (
     <div className="navbar">
@@ -16,7 +16,7 @@ const NavBar = () => {
         <button onClick={testing}> click here </button>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
