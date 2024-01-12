@@ -25,13 +25,7 @@ console.log(React);
 
   return (
     <div>
-      <h1> Adding new content over here</h1>
-      <p> Check the content below</p>
-      <p> Click here for another content</p>
-      <h1> Adding new content over here</h1>
-      <p> Check the content below</p>
-      <p> Click here for another content</p>
-      <p> this is another test you know </p>
+      <h1> Welcome to buddy sales! </h1>
       {post.results.map((post) => {
         return (
           <p key={post.id}>

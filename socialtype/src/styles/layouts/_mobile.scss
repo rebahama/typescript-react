@@ -1,11 +1,18 @@
 * {
     outline: 1px solid pink;
 }
+body,html{
+    margin: 0;
+    padding: 0;
+}
 
 .App {
     background-color: $main-color;
 }
 
-.navbar{
-    
+header {
+    .top-banner {
+        background-color: $header-color;
+        height: 50px;
+    }
 }
