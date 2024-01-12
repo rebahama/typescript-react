@@ -26,6 +26,7 @@ console.log(React);
   return (
     <div>
       <h1> Adding new content over here</h1>
+      <p> Check the content below</p>
       {post.results.map((post) => {
         return (
           <p key={post.id}>
