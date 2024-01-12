@@ -5,7 +5,15 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function App() {
-  const [calculate, setCalculate] = useState({ results: [] });
+  interface IResult {
+    id: number;
+    title: string;
+    // Add other properties as needed
+  }
+
+  const [calculate, setCalculate] = useState<{ results: IResult[] }>({
+    results: [],
+  });
 
   useEffect(() => {
     const handleData = async () => {
@@ -27,8 +35,12 @@ function App() {
       <NavBar />
 
       {calculate.results.map((calculate) => {
-        return <p> {calculate.id}  {calculate.title} </p>;
-        
+        return (
+          <p>
+            {' '}
+            {calculate.id} {calculate.title}{' '}
+          </p>
+        );
       })}
     </div>
   );
