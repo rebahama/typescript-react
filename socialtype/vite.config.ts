@@ -4,9 +4,8 @@ import sass from 'sass'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  'base': '/typescript-react/',
-  
   plugins: [react()],
+  base: '/typescript-react/',
   css: {
     preprocessorOptions: {
       scss: {
