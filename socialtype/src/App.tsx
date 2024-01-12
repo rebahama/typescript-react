@@ -27,8 +27,8 @@ function App() {
       <NavBar />
 
       {calculate.results.map((calculate) => {
-        return <p> {calculate.id}</p>
-      
+        return <p> {calculate.id}  {calculate.title} </p>;
+        
       })}
     </div>
   );
