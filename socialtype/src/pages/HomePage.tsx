@@ -28,6 +28,7 @@ console.log(React);
       <h1> Adding new content over here</h1>
       <p> Check the content below</p>
       <p> Click here for another content</p>
+      <p> this is another test you know </p>
       {post.results.map((post) => {
         return (
           <p key={post.id}>
