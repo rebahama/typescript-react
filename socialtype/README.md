@@ -38,4 +38,5 @@ To run the Quiz Game on your local machine, follow these steps:
 * `npm install gh-pages --save-dev`
 * `npm i -D sass sass-loader`
 * `npm install axios`
+* `npm run deploy to deploy` 
 3. Start the application using `npm run dev` (Vite).

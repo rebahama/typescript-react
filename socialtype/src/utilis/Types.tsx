@@ -1,6 +1,6 @@
 interface IResult {
   id: number;
-  title: string;
+  title?: string; // Making 'title' optional
   // Add other properties as needed
 }
 
