@@ -1,26 +1,47 @@
 // Logo.js
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Logo = () => {
-    const [colors, setColors] = useState("blue");
+    const [colors, setColors] = useState<string>('#a25757');
+
+    
 
     const HandleClick = () => {
-        setColors(prevColor => (prevColor === 'red' ? 'blue' : 'red'));
+        setColors(prevColor => (prevColor === 'yellow' ? '#a25757' : 'yellow'));
     }
 
+
+    useEffect(() => {
+        // Update body background color when fillColor changes
+        if (colors === 'yellow') {
+            document.body.classList.add('background-theme');
+          } else {
+            document.body.classList.remove('background-theme');
+        }
+    
+        // Cleanup the effect when the component unmounts
+        return () => {
+            document.body.classList.remove('background-theme'); // Reset to default background color
+        };
+      }, [colors]);
   return (
-    <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
+    <svg width="30px" height="30px"
+    viewBox="-5 0 32 32" version="1.1"
     onClick={HandleClick}
-    fill={colors}
-    className="bi bi-google"
-    viewBox="0 0 16 16"
-  >
-    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
-  </svg>
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+    fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+    <title>moon</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1"
+    stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+    sketch:type="MSPage"> <g id="Icon-Set-Filled" sketch:type="MSLayerGroup"
+    transform="translate(-575.000000, -829.000000)" fill={colors}> 
+    <path d="M586.256,845 C586.256,838.1 590.735,832.236 597,829.991 C595.243,829.361 593.353,829 591.372,829 C582.33,829 575,836.164 575,845 C575,853.837 582.33,861 591.372,861 C593.353,861 595.243,860.639 597,860.009 C590.735,857.764 586.256,851.901 586.256,845"
+    id="moon" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+
+  
   );
 };
 

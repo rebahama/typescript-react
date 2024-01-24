@@ -1,7 +1,9 @@
 * {
     outline: 1px solid pink;
 }
-body,html{
+
+body,
+html {
     margin: 0;
     padding: 0;
 }
@@ -17,4 +19,8 @@ header {
         background-color: $header-color;
         height: 50px;
     }
+}
+
+.background-theme {
+    background-color: red;
 }

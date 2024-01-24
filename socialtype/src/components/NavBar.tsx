@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SvgFile from '../assets/images/moon-svgrepo-com.svg';
 import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import Logo from './Logo';
 
 const NavBar: React.FC = () => {
   const [hello, setHello] = useState<string | null>('testing');
@@ -16,7 +17,7 @@ const NavBar: React.FC = () => {
     <header>
       <div className="top-banner">
         <p> The buddy saler</p>
-    <img src={SvgFile} style={{ width: '25px', height: '25px' }}></img>
+        <Logo />
       </div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
