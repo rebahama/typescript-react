@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SvgFile from '../assets/images/moon-svgrepo-com.svg';
 import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import Logo from './Logo';
 
@@ -17,7 +16,7 @@ const NavBar: React.FC = () => {
     <header>
       <div className="top-banner">
         <p> The buddy saler</p>
-        <Logo />
+        <Logo colors='#a25757' />
       </div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>

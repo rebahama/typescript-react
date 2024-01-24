@@ -4,4 +4,5 @@ interface IResult {
   // Add other properties as needed
 }
 
-export default IResult;
+
+export default IResult
