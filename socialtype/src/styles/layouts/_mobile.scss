@@ -12,6 +12,8 @@ body,html{
 
 header {
     .top-banner {
+        display: flex;
+        justify-content: space-between;
         background-color: $header-color;
         height: 50px;
     }
