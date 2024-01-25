@@ -4,7 +4,6 @@ import Logo from './Logo';
 
 const NavBar: React.FC = () => {
   const [hello, setHello] = useState<string | null>('testing');
-  
 
   const NotLogg: React.FC = () => {
     const content: string = 'this is true';
@@ -16,7 +15,7 @@ const NavBar: React.FC = () => {
     <header>
       <div className="top-banner">
         <p> The buddy saler</p>
-        <Logo colors='#a25757' />
+        <Logo colors="#a25757" />
       </div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
@@ -31,7 +30,9 @@ const NavBar: React.FC = () => {
                 <NavDropdown.Item href="#action/3.2">
                   Another action
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Separated link

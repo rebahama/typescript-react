@@ -7,7 +7,7 @@ const HomePage = () => {
   const [post, setPost] = useState<{ results: IResult[] }>({
     results: [],
   });
-console.log(React);
+  console.log(React);
   useEffect(() => {
     const handleData = async () => {
       try {
