@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import Logo from './Logo';
+import { NavLink } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
   const [hello, setHello] = useState<string | null>('testing');
@@ -23,8 +24,12 @@ const NavBar: React.FC = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+            <NavLink to="typescript-react/">
+  Home
+</NavLink>
+<NavLink to="typescript-react/showall">
+  Show All
+</NavLink>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
