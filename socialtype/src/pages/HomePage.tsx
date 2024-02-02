@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import IResult from '../utilis/Types.tsx';
+import HomePageProps from './HomePageProps.tsx';
 
 interface ChildComponentProps {
   message: string;
 }
 
 const HomePage: React.FC<ChildComponentProps> = (props) => {
-  
+  const datatwo = "testing props";
 
   const [post, setPost] = useState<{ results: IResult[] }>({
     results: [],
@@ -31,15 +32,11 @@ const HomePage: React.FC<ChildComponentProps> = (props) => {
 
   return (
     <div>
-      <h1> Welcome to buddy sales! </h1>
-      {post.results.map((post) => {
-        return (
-          <p key={post.id}>
-            {post.id} {post.title}
-          </p>
-        );
-      })}
-      <p> {props.message}</p>
+     
+      {post.results.length > 0 && (
+        <HomePageProps key={post.results[0].id} {...post.results[0]} message={datatwo} />
+      )}
+       {props.message}
     </div>
   );
 };
