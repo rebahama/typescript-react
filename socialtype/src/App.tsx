@@ -13,6 +13,7 @@ function App() {
       <Route path="typescript-react/" element={<HomePage />} />
       <Route path="typescript-react/home" element="hello" />
       <Route path="typescript-react/showall" element={<ShowAll/>} />
+      <Route path="*" element="not found" />
       </Routes>
     </div>
   );

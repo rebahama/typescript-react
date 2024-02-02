@@ -3,6 +3,7 @@ import { Button, Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import Logo from './Logo';
 import { NavLink } from 'react-router-dom';
 
+
 const NavBar: React.FC = () => {
   const [hello, setHello] = useState<string | null>('testing');
 
