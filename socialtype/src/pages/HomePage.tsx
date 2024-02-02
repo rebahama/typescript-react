@@ -3,7 +3,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import IResult from '../utilis/Types.tsx';
 
-const HomePage = () => {
+interface ChildComponentProps {
+  message: string;
+}
+
+const HomePage: React.FC<ChildComponentProps> = (props) => {
+  
+
   const [post, setPost] = useState<{ results: IResult[] }>({
     results: [],
   });
@@ -33,6 +39,7 @@ const HomePage = () => {
           </p>
         );
       })}
+      <p> {props.message}</p>
     </div>
   );
 };
